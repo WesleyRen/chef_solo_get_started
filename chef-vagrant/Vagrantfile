@@ -1,0 +1,37 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+  #config.vm.box = "bento/centos-6.7"
+  #config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "precise64"
+
+  config.vm.define "test1" do |test1|
+    test1.vm.hostname = "test1"
+    test1.vm.network "private_network", ip: "192.168.50.31"
+  end 
+
+  config.vm.provider "virtualbox" do |v| 
+    v.memory = 1024
+    v.cpus = 1 
+  end 
+
+  config.ssh.password = "vagrant"
+  #config.vm.share_folder "v-data", "/srv/data", "../data", :nfs => true
+  #config.vm.share_folder "v-site", "/srv/site", ".", :nfs => true
+
+  config.vm.provision :chef_solo do |chef|
+    #chef.roles_path = "../chef/roles"
+    #chef.cookbooks_path = ["../chef/site-cookbooks", "../chef/cookbooks"]
+
+    chef.cookbooks_path = "cookbooks"
+    chef.file_cache_path = "chef-solo"
+    # "run_list": [ "recipe[apt]", "recipe[phpapp]" ]
+    chef.add_recipe "apt"
+    chef.add_recipe "phpapp"
+
+
+    #chef.add_role "mysqlserver"
+  end
+
+end
