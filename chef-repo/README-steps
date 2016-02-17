@@ -2,7 +2,7 @@ Source: http://gettingstartedwithchef.com/first-steps-with-chef.html
 
 High level steps:
 1. Install a Ubuntu VM.
-2. Put this directory under /root/chef-repo
+2. Put chef-repo under /root/.
 3. install chef-solo: curl -L https://www.opscode.com/chef/install.sh | bash
 4. cd chef-repo/
 5. chef-solo -c solo.rb -j web.json
