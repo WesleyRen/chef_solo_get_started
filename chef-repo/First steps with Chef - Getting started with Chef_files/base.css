@@ -1,0 +1,198 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 80px;
+}
+#footer {
+  border-top: 1px solid #e0e0e0;
+  background-color: #f0f0f0;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  #footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+#footer p {
+  margin-left: 90px; 
+  margin-bottom: 20px;
+}
+
+p {
+  margin: 15px 0;
+}
+
+.editor {
+  font-size: 0.75em;
+}
+
+.terminal {
+  margin: 15px inherit;
+  background-color: #333;
+  color: #ccc;
+  font-size: 0.75em;
+}
+
+.terminal .folder {
+  color: #aa00ff;
+}
+
+.terminal .action {
+  color: green;
+  font-style: normal;
+}
+
+.terminal .error {
+  color: red;
+  font-style: normal;
+}
+
+
+.terminal .diff {
+  color: #888;
+}
+
+.terminal .hide {
+  display: none;
+}
+
+
+
+.code2add {
+  color: green;
+  font-weight: bold;
+}
+
+
+.code2remove {
+  color: red;
+}
+
+.code2change {
+  color: blue;
+}
+
+.code2remote {
+  color: teal;
+}
+
+
+
+.code2highlight {
+  font-weight: bold;
+  color: yellow;
+}
+
+.alert .terminal {
+  text-shadow: none;
+}
+
+.chef-error { 
+  color: red;  
+  font-weight: bold;
+}
+
+.cmd {
+  font-weight: bold;
+}
+
+#footer .container {
+  background: url(../img/hellovsmall.png) 0 10px no-repeat;
+}
+
+.tab-content {
+  padding: 0 20px;
+}
+
+.tab-content p {
+  margin: 0;
+}
+
+
+#gswc-chapter-switcher {
+  float: right;
+}
+
+
+.twitter-share-button[style] { vertical-align: text-bottom !important; }
+
+.option-switch ul {
+  margin-bottom: 0;
+}
+
+.tab-content {
+  padding: 15px;
+  border: solid 1px #ddd;
+  border-top: none;
+}
+
+.bb-sponsor {
+  height: 28px;
+}
+
+.bb-sponsor a {
+  display: block;
+  width: 200px;
+  height: 28px;
+  position: relative;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.bb-sponsor a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff url(../img/sponsored_by_brightbox.png) 0 0 no-repeat;
+  display: block;
+  width: 200px;
+  height: 28px;
+}
+
+.bb-header {
+  margin-top: 20px;
+}
+
+.bb-header a {
+  float: right;
+}
+
+.bb-footer a {
+  margin: 0 auto;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.container {
+  width: auto;
+  max-width: 680px;
+}
+.container .credit {
+  margin: 20px 0;
+}
